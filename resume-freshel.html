@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshel D. - Executive Assistant | Fierce Health</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #1773B0;
+      --dark: #0e283c;
+      --highlight: #458fc0;
+      --white: #FFFFFF;
+      --gray-50: #F8FAFB;
+      --gray-100: #F1F5F4;
+      --gray-200: #E2E8E7;
+      --gray-400: #94A3A0;
+      --gray-600: #4B5E5A;
+      --gray-700: #374845;
+      --font-heading: 'Archivo', sans-serif;
+      --font-body: 'Archivo', sans-serif;
+    }
+    body { font-family: var(--font-body); background: var(--gray-50); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .back-link { display: block; background: var(--dark); padding: 12px 40px; font-family: var(--font-heading); font-size: 14px; font-weight: 500; }
+    .back-link a { color: var(--highlight); text-decoration: none; transition: color 0.2s; }
+    .back-link a:hover { color: var(--white); }
+    .back-link a::before { content: "\2190\00a0\00a0"; }
+    header { background: var(--dark); padding: 48px 40px 52px; position: relative; overflow: hidden; }
+    header::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .header-brand { font-family: var(--font-heading); font-size: 32px; font-weight: 700; color: var(--white); letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header-brand span { color: var(--highlight); }
+    .header-subtitle { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--gray-400); text-transform: uppercase; letter-spacing: 2px; }
+    .candidate-banner { background: linear-gradient(135deg, var(--primary), #458fc0); padding: 36px 40px; color: var(--white); }
+    .candidate-name { font-family: var(--font-heading); font-size: 28px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 6px; }
+    .candidate-title { font-size: 16px; font-weight: 400; opacity: 0.9; margin-bottom: 12px; }
+    .candidate-contact { display: flex; flex-wrap: wrap; gap: 20px; font-size: 13px; opacity: 0.85; }
+    .resume-body { max-width: 900px; margin: 0 auto; padding: 40px 40px 60px; }
+    .section { margin-bottom: 36px; }
+    .section-title { font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 10px; border-bottom: 2px solid var(--gray-200); margin-bottom: 18px; }
+    .summary-text { font-size: 15px; color: var(--gray-700); line-height: 1.75; }
+    .skills-grid { display: grid; grid-template-columns: 170px 1fr; gap: 10px 20px; font-size: 14px; }
+    .skill-label { font-weight: 600; color: var(--dark); padding: 4px 0; }
+    .skill-value { color: var(--gray-600); padding: 4px 0; line-height: 1.6; }
+    .experience-item { margin-bottom: 24px; padding-left: 20px; border-left: 3px solid var(--primary); }
+    .experience-item:last-child { margin-bottom: 0; }
+    .exp-header { margin-bottom: 8px; }
+    .exp-role { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--dark); }
+    .exp-company { font-size: 14px; font-weight: 500; color: var(--primary); }
+    .exp-meta { font-size: 13px; color: var(--gray-400); margin-top: 2px; }
+    .exp-desc { font-size: 14px; color: var(--gray-600); line-height: 1.65; }
+    .exp-bullets { font-size: 14px; color: var(--gray-600); line-height: 1.65; padding-left: 20px; margin-top: 6px; }
+    .exp-bullets li { margin-bottom: 4px; }
+    .education-item, .cert-item, .lang-item { font-size: 15px; margin-bottom: 8px; }
+    .edu-degree, .cert-name { font-weight: 600; color: var(--dark); }
+    .edu-school { color: var(--primary); font-weight: 500; }
+    .edu-year { font-size: 13px; color: var(--gray-400); }
+    footer { background: var(--dark); padding: 32px 40px; text-align: center; position: relative; }
+    footer::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--highlight)); }
+    .footer-text { font-family: var(--font-heading); font-size: 14px; color: var(--gray-400); }
+    .footer-text strong { color: var(--white); }
+    .footer-text .accent { color: var(--highlight); }
+    .footer-sub { font-size: 12px; color: var(--gray-600); margin-top: 8px; }
+    @media (max-width: 640px) {
+      header, .candidate-banner, .resume-body, .back-link, footer { padding-left: 20px; padding-right: 20px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .candidate-contact { flex-direction: column; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="back-link"><a href="index.html">Back to All Candidates</a></div>
+  <header>
+    <div class="header-brand">Fierce Health<span>.</span></div>
+    <div class="header-subtitle">Candidate Resume</div>
+  </header>
+  <div class="candidate-banner">
+    <div class="candidate-name">Freshel D.</div>
+    <div class="candidate-title">Executive Assistant | Philippines</div>
+    <div class="candidate-contact">
+      <span>Philippines</span>
+      <span>4+ yrs Healthcare Admin experience</span>
+    </div>
+  </div>
+  <div class="resume-body">
+    <div class="section"><div class="section-title">Professional Summary</div><p class="summary-text">Executive Assistant with hands-on experience supporting leadership, managing calendars, documentation, and internal communications. Highly organized, dependable, and adaptable, with a proven ability to handle multiple priorities while maintaining accuracy and professionalism. Recognized for strong work ethic, initiative, and collaborative mindset.</p></div>
+    <div class="section"><div class="section-title">Skills &amp; Tech Stack</div><div class="skills-grid">
+    <div class="skill-label">Administrative &amp; Management</div>
+    <div class="skill-value">Lead Generation, Bookkeeping, Data Entry, Project Management, Product Research, Email Management, Calendar Management</div>
+    <div class="skill-label">Technical &amp; Creative</div>
+    <div class="skill-value">Basic Video Editing, Basic Graphic Design, Social Media Management, Tech Savvy</div>
+    <div class="skill-label">Personal Attributes</div>
+    <div class="skill-value">Adaptability, Attention to detail</div></div></div>
+    <div class="section"><div class="section-title">Work Experience</div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Lead Generation Specialist/ Lead Scrubber (Freelance/Contract)</div>
+        <div class="exp-company">Manawa</div>
+        <div class="exp-meta">Nov. 2024 - April 2025</div>
+      </div>
+      <ul class="exp-bullets"><li>Use Apollo, LinkedIn Sales Navigator, Lusha, and Anymail Finder to find potential leads</li><li>Verify and clean lead data for accuracy</li><li>Using Close.io to organize leads into structured lists for sales use</li><li>Remove duplicates and outdated or incorrect information</li><li>Ensure all lead details (e.g., name, company, title, email) are complete and accurate</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Executive Assistant</div>
+        <div class="exp-company">Dega Systems</div>
+        <div class="exp-meta">Oct 2024- Current</div>
+      </div>
+      <ul class="exp-bullets"><li>Manage executives' calendars, schedule meetings, and coordinate day-to-day tasks.</li><li>Handle CEO's inbox, prioritize communications, draft responses, and ensure timely follow-up.</li><li>Oversee billing, accounts payable/receivable, and maintain accurate financial records.</li><li>Draft client proposals, manage contract renewals, handle certificate renewals and support cloud-based documentation.</li><li>Maintain organized digital filing systems and coordinate procurement with vendors.</li><li>New hire onboarding and training</li><li>Create internal engagement content and support employee communications.</li><li>Proficient in Microsoft 365 applications, Google Workspace, and basic content creation tools.</li><li>Book flights, hotels, and coordinate travel arrangements for executives and staff.</li><li>Answer calls, relay messages, and manage correspondence professionally.</li><li>Provide administrative support to committees/executives, including meeting scheduling, minutes, and follow-ups.</li><li>Collaborate with bookkeepers to reconcile financial documents and ensure accurate reporting.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Social Media Assistant (Freelance/Contract)</div>
+        <div class="exp-company">JBA Creations</div>
+        <div class="exp-meta">Sept 2024- Nov. 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Creating Content Strategy</li><li>Social Media Management</li><li>Content Writing</li><li>Helping lead marketing for any tasks related to marketing the client's business</li><li>Video Editing using CapCut</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">Operations Assistant</div>
+        <div class="exp-company">Outsource Access</div>
+        <div class="exp-meta">September 2021- Nov. 2024</div>
+      </div>
+      <ul class="exp-bullets"><li>Manage CEO's inbox, prioritize communications, draft responses, and ensure timely follow-up.</li><li>Oversee billing, A/P &amp; A/R, and maintain financial records.</li><li>Draft client proposals, manage contract renewals, and support cloud-based documentation.</li><li>Maintain organized digital filing systems and coordinate procurement with vendors.</li><li>Conduct virtual interviews and assist in recruitment processes.</li><li>Create internal engagement content and support employee communications.</li><li>Proficient in Microsoft 365 applications, including Word, Excel, Outlook, and Teams.</li><li>Answer calls and relay messages promptly and professionally.</li><li>Manage membership records and process applications.</li><li>Provide admin support to committees/executives and handle meeting scheduling, minutes, and follow-ups.</li><li>Collaborate with the bookkeeper to reconcile financial documents.</li></ul>
+    </div>
+    <div class="experience-item">
+      <div class="exp-header">
+        <div class="exp-role">L1 Technical Support Representative</div>
+        <div class="exp-company">Concentrix</div>
+        <div class="exp-meta">June 2020- April 2021</div>
+      </div>
+      <ul class="exp-bullets"><li>Respond to basic technical issues via phone.</li><li>Troubleshoot hardware, software, and network problems</li><li>Log and track support tickets in the system</li><li>Escalate complex issues to higher-level support</li><li>Guide users through standard procedures and solutions</li><li>Assist with account setup, password resets, and software installations</li><li>Ensure timely and professional customer service</li><li>Identifies and recommends products to our customer base on what they would need.</li></ul>
+    </div></div>
+    <div class="section"><div class="section-title">Education</div>
+    <div class="education-item">
+      <div class="edu-degree">Senior High School Graduate - STEM</div>
+      <div class="edu-school">PHINMA- Cagayan de Oro College</div>
+      <div class="edu-year">2017-2018</div>
+    </div></div>
+    <div class="section"><div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-name">Completed VA Basics: Organizing, Work tools and Management</span></div>
+    <div class="cert-item"><span class="cert-name">Completed VA Basics: Computer Maintenance</span></div></div>
+    
+  </div>
+  <footer>
+    <div class="footer-text">Presented by <strong>Sagan</strong> for <strong class="accent">Fierce Health</strong></div>
+    <div class="footer-sub">getsagan.com · Redefining Recruitment</div>
+  </footer>
+</body>
+</html>
